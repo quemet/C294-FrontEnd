@@ -12,7 +12,8 @@ import HelloWorld from './components/HelloWorld.vue'
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/addNote">Ajouter une note</RouterLink>
+        <RouterLink to="/addNote">Add a Note</RouterLink>
+        <RouterLink to="/modifyNote">Modify a Note</RouterLink>
       </nav>
     </div>
   </header>

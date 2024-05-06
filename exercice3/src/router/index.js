@@ -9,14 +9,14 @@ const router = createRouter({
       component: () => import('../views/HomeView.vue')
     },
     {
-      path: '/noteDetail',
-      name: 'noteDetail',
-      component: () => import('../views/NoteDetailView.vue')
-    },
-    {
       path: '/addNote',
       name: 'addNote',
       component: () => import('../views/AddNoteView.vue')
+    },
+    {
+      path: '/modifyNote',
+      name: 'modifyNote',
+      component: () => import('../views/NoteDetailView.vue')
     }
   ]
 })

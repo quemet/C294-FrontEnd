@@ -1,25 +1,27 @@
 <script setup>
 import { ref } from 'vue'
 
-let counter = ref({ counter: 5 })
+let counter = ref(0)
 
 function increment() {
-  counter.value.counter += 1
+  counter.value += 1
 }
 
 function decrement() {
-  counter.value.counter -= 1
+  if (counter.value > 0) {
+    counter.value--
+  }
 }
 
 function reset() {
-  counter.value.counter = 0
+  counter.value = 0
 }
 </script>
 
 <template>
   <div>
     <h1>Compteur dynamique</h1>
-    <p>La valeur dynamique du compteur est {{ counter.counter }}</p>
+    <p>La valeur dynamique du compteur est : {{ counter }}</p>
     <div>
       <button @click="increment">Incrémenter</button>
       <button @click="decrement">Décrémenter</button>
